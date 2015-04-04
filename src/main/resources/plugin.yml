@@ -1,0 +1,22 @@
+name: HardcoreMode
+main: com.github.mdsimmo.hardcoremode.HardcoreMode
+version: 0.1.0
+
+commands:
+  hardcore:
+    description: top level Hardcore command 
+    usage: hardcore <subcommand>
+    permission: hardcore.player
+
+permissions:
+  hardcore.*:
+    description: Gives access to all Hardcore commands
+    children:
+      hardcore.player: true
+      hardcore.op: true
+  hardcore.player:
+    description: Basic ability to view data
+    default: true
+  hardcore.op:
+    description: Ability to configure gameplay
+    default: op
